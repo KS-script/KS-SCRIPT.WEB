@@ -13,6 +13,9 @@
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
 
+    <!-- Mouse Glow Effect -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
     <!-- Animated Background -->
     <div class="animated-bg">
         <div class="gradient-orb orb-1"></div>
@@ -31,25 +34,22 @@
         <div class="noise-overlay"></div>
     </div>
 
-    <!-- Mouse Trail -->
-    <canvas id="mouseTrail"></canvas>
-
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo magnetic" data-strength="30">
+            <div class="logo" data-magnetic>
                 <div class="logo-icon">
                     <i class="fas fa-code"></i>
                 </div>
-                <h1 class="gradient-text-animated">KS SCRIPT</h1>
+                <h1>KS SCRIPT</h1>
             </div>
             <nav>
-                <a href="#home" class="nav-link active magnetic" data-strength="20">Home</a>
-                <a href="#features" class="nav-link magnetic" data-strength="20">Features</a>
-                <a href="#script" class="nav-link magnetic" data-strength="20">Script</a>
-                <a href="#contact" class="nav-link magnetic" data-strength="20">Contact</a>
+                <a href="#home" class="nav-link active" data-magnetic>Home</a>
+                <a href="#features" class="nav-link" data-magnetic>Features</a>
+                <a href="#script" class="nav-link" data-magnetic>Script</a>
+                <a href="#contact" class="nav-link" data-magnetic>Contact</a>
             </nav>
-            <button class="mobile-menu magnetic" id="mobileMenu" data-strength="20">
+            <button class="mobile-menu" id="mobileMenu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -67,25 +67,21 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-icon magnetic" data-strength="50">
+                <div class="hero-icon" data-tilt>
                     <i class="fas fa-terminal"></i>
-                    <div class="icon-ring"></div>
-                    <div class="icon-ring ring-2"></div>
                 </div>
                 <h2 class="hero-title">
-                    <span class="title-line">
-                        <span class="gradient-text-animated">KS SCRIPT</span>
-                    </span>
+                    <span class="text-reveal">KS SCRIPT</span>
                 </h2>
-                <p class="hero-subtitle text-reveal">
+                <p class="hero-subtitle">
                     Experience the most advanced Roblox script with cutting-edge features
                 </p>
                 <div class="hero-buttons">
-                    <a href="#script" class="btn btn-primary magnetic ripple" data-strength="25">
+                    <a href="#script" class="btn btn-primary" data-magnetic data-ripple>
                         <i class="fas fa-download"></i>
                         Get Script
                     </a>
-                    <a href="#features" class="btn btn-secondary magnetic ripple" data-strength="25">
+                    <a href="#features" class="btn btn-secondary" data-magnetic data-ripple>
                         <i class="fas fa-info-circle"></i>
                         Learn More
                     </a>
@@ -108,13 +104,12 @@
                     <i class="fas fa-star"></i>
                     Features
                 </span>
-                <h2 class="section-title gradient-text-animated">Key Features</h2>
+                <h2 class="section-title">Key Features</h2>
                 <p class="section-desc">Discover what makes KS Script stand out</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card tilt-card" data-delay="0">
+                <div class="feature-card" data-tilt data-delay="0">
                     <div class="feature-glow"></div>
-                    <div class="feature-shine"></div>
                     <div class="feature-icon">
                         <i class="fas fa-gift"></i>
                     </div>
@@ -122,9 +117,8 @@
                     <p>Completely free to use with no hidden costs or premium tiers</p>
                     <div class="feature-line"></div>
                 </div>
-                <div class="feature-card tilt-card" data-delay="100">
+                <div class="feature-card" data-tilt data-delay="100">
                     <div class="feature-glow"></div>
-                    <div class="feature-shine"></div>
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
@@ -132,9 +126,8 @@
                     <p>Lightning-fast script execution for seamless performance</p>
                     <div class="feature-line"></div>
                 </div>
-                <div class="feature-card tilt-card" data-delay="200">
+                <div class="feature-card" data-tilt data-delay="200">
                     <div class="feature-glow"></div>
-                    <div class="feature-shine"></div>
                     <div class="feature-icon">
                         <i class="fas fa-sync-alt"></i>
                     </div>
@@ -142,9 +135,8 @@
                     <p>Automatically updates to the latest version without manual intervention</p>
                     <div class="feature-line"></div>
                 </div>
-                <div class="feature-card tilt-card" data-delay="300">
+                <div class="feature-card" data-tilt data-delay="300">
                     <div class="feature-glow"></div>
-                    <div class="feature-shine"></div>
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
@@ -164,13 +156,12 @@
                     <i class="fas fa-code"></i>
                     Script
                 </span>
-                <h2 class="section-title gradient-text-animated">Get The Script</h2>
+                <h2 class="section-title">Get The Script</h2>
                 <p class="section-desc">Copy and execute in your favorite executor</p>
             </div>
             
             <!-- Script Info Card -->
-            <div class="script-info-card tilt-card">
-                <div class="card-glow"></div>
+            <div class="script-info-card" data-tilt data-tilt-max="3">
                 <div class="card-shine"></div>
                 
                 <div class="info-header">
@@ -215,7 +206,7 @@
                             <i class="fas fa-file-code"></i>
                             KS.Loader.lua
                         </span>
-                        <button class="copy-btn magnetic ripple" onclick="copyScript()" data-strength="15">
+                        <button class="copy-btn" onclick="copyScript()" data-magnetic data-ripple>
                             <i class="fas fa-copy"></i>
                             <span>Copy</span>
                         </button>
@@ -230,7 +221,7 @@
 
                 <!-- Executor Compatibility -->
                 <div class="executor-section">
-                    <button class="executor-toggle magnetic" onclick="toggleExecutors()" data-strength="10">
+                    <button class="executor-toggle" onclick="toggleExecutors()" data-ripple>
                         <div class="toggle-left">
                             <i class="fas fa-microchip"></i>
                             <span>Executor Compatibility</span>
@@ -338,12 +329,11 @@
                     <i class="fas fa-share-alt"></i>
                     Social
                 </span>
-                <h2 class="section-title gradient-text-animated">Connect With Us</h2>
+                <h2 class="section-title">Connect With Us</h2>
                 <p class="section-desc">Follow us for updates and support</p>
             </div>
             <div class="social-links">
-                <a href="https://www.youtube.com/@KS_SCRIPT_Owner" target="_blank" class="social-card youtube tilt-card magnetic" data-strength="20">
-                    <div class="social-glow"></div>
+                <a href="https://www.youtube.com/@KS_SCRIPT_Owner" target="_blank" class="social-card youtube" data-tilt data-magnetic>
                     <div class="social-shine"></div>
                     <div class="social-icon">
                         <i class="fab fa-youtube"></i>
@@ -354,7 +344,7 @@
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
-                <div class="social-card discord disabled tilt-card">
+                <div class="social-card discord disabled" data-tilt>
                     <div class="social-icon">
                         <i class="fab fa-discord"></i>
                     </div>
@@ -370,9 +360,9 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo magnetic" data-strength="20">
+                <div class="footer-logo">
                     <i class="fas fa-code"></i>
-                    <span class="gradient-text-animated">KS SCRIPT</span>
+                    <span>KS SCRIPT</span>
                 </div>
                 <p>&copy; 2026 KS SCRIPT. All rights reserved.</p>
                 <p class="footer-credit">Made with <i class="fas fa-heart"></i> by Team KS</p>
